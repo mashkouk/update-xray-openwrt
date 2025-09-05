@@ -1,12 +1,19 @@
 #!/bin/sh
 # Update Xray-core with custom download link (no backup)
-# Estefade: ./update-xray.sh <download_link>
+# Estefade: ./update-xray.sh [download_link]
 # Mesal:   ./update-xray.sh https://github.com/XTLS/Xray-core/releases/download/v1.8.11/Xray-linux-64.zip
 
 LINK="$1"
 
+# اگر لینک داده نشده، از کاربر بخواه
 if [ -z "$LINK" ]; then
-  echo "❌ Lotfan link download ro vared kon."
+  echo -n "Lotfan link download Xray-core ro vared kon: "
+  read LINK
+fi
+
+# بررسی دوباره لینک
+if [ -z "$LINK" ]; then
+  echo "❌ Link download vared nashod. Exit mikonim."
   exit 1
 fi
 
