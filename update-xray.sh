@@ -3,7 +3,7 @@
 # Estefade: ./update-xray.sh <download_link>
 # Mesal:   ./update-xray.sh https://github.com/XTLS/Xray-core/releases/download/v1.8.11/Xray-linux-64.zip
 
-LINK=$1
+LINK="$1"
 
 if [ -z "$LINK" ]; then
   echo "❌ Lotfan link download ro vared kon."
